@@ -37,8 +37,7 @@ Follow these instructions to get the project up and running on your local machin
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/csv-data-validator.git
-   cd csv-data-validator
+   git clone https://github.com/gauravgarwa/proqsmart-assignment.git
 
 2. Install dependencies:
 
