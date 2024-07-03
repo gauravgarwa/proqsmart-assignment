@@ -1,0 +1,19 @@
+<div class="upload-container">
+  <h2>Upload CSV</h2>
+  <div class="upload-box">
+    <input type="file" id="fileInput" (change)="onFileChange($event)" hidden />
+    <label for="fileInput" class="file-upload-label">
+      <img src="assets/upload-icon.svg" alt="Upload Icon">
+      <p class="heading">Select a CSV file to upload<br > <span class="subheading">or drag and drop it here</span> </p>
+    </label>
+    
+    </div>
+
+  <button class="next-btn" (click)="nextPage()" [disabled]="!file">Next</button>
+
+  <div class="url-upload">
+    <label for="urlInput">Or upload from URL</label>
+    <input type="text" id="urlInput" placeholder="https://example.com/yourfile.csv">
+    <button (click)="uploadFromUrl()">Upload</button>
+  </div>
+</div>

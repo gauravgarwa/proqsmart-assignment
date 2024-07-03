@@ -1,0 +1,49 @@
+<div>
+  <h2 class="heading">Preview CSV Data</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone number</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>GPA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of csvData; let i = index">
+        <td [class.error]="hasError(i, 'First Name') !== ''">
+          {{ row.first_name }}
+          <span *ngIf="hasError(i, 'First Name')">{{ hasError(i, 'First Name') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'Last Name') !== ''">
+          {{ row.last_name }}
+          <span *ngIf="hasError(i, 'Last Name')">{{ hasError(i, 'Last Name') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'Email') !== ''">
+          {{ row.email }}
+          <span *ngIf="hasError(i, 'Email')">{{ hasError(i, 'Email') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'Phone number') !== ''">
+          {{ row.phone }}
+          <span *ngIf="hasError(i, 'Phone number')">{{ hasError(i, 'Phone number') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'City') !== ''">
+          {{ row.city }}
+          <span *ngIf="hasError(i, 'City')">{{ hasError(i, 'City') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'Address') !== ''">
+          {{ row.address }}
+          <span *ngIf="hasError(i, 'Address')">{{ hasError(i, 'Address') }}</span>
+        </td>
+        <td [class.error]="hasError(i, 'GPA') !== ''">
+          {{ row.gpa }}
+          <span *ngIf="hasError(i, 'GPA')">{{ hasError(i, 'GPA') }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="next-button" (click)="nextPage()">Next</button>
+</div>

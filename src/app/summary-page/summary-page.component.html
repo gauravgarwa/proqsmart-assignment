@@ -1,0 +1,28 @@
+<div class="summary-container">
+  <div class="summary-header">
+    <div class="status-icon"></div>
+    <h2>Data imported successfully</h2>
+    <a href="#" class="import-summary-link">Import Summary</a>
+  </div>
+  <div class="summary-details">
+    <div class="student-details-tab">
+      <a href="#" class="student-details-link">Student Details</a>
+    </div>
+    <div class="summary-stats">
+      <table>
+        <tbody>
+          <tr>      
+            <td>Student Details</td>
+          <td class="success-count">Success: {{ validRowCount }}</td>          
+        </tr>
+          <tr>
+          
+          <td class="total-records">Total No. of Records: {{totalRecords}}</td>
+          <td class="failure-count">Failure: {{ invalidRowCount }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button class="go-back-button">Access the report</button>
+</div>
